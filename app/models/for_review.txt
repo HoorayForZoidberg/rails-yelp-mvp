@@ -1,2 +1,0 @@
-1 - rspec validation of Review model fails when trying to evaluate if rating is an integer
-
