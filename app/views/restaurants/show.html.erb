@@ -1,12 +1,12 @@
 <h1> <%= @restaurant.name %></h1>
 <p> Address: <%= @restaurant.address %></p>
-<p> Rating: <%= @restaurant.rating %></p>
 <hr>
 <p>Reviews</p>
-<hr>
-<%= @restaurant.reviews.each do |review| %>
-  <ul>
-    <li>Rating: <%= review.rating %></li>
-    <li>Review: <%= review.content %></li>
+<% @restaurant.reviews.each do |review| %>
+  <ul class="list-group">
+    <li class="list-group-item">Rating: <%= review.rating %></li>
+    <li class="list-group-item">Review: <%= review.content %></li>
   </ul>
 <% end %>
+<%= link_to "New Review", new_restaurant_review_path(restaurant_id: @restaurant.id), class: "btn btn-primary" %>
+<%= link_to "Restaurants", restaurants_path, class: "btn btn-primary" %>

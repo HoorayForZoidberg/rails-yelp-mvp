@@ -1,0 +1,2 @@
+1) rspec test not passing for "rating must be integer"
+2) why do review ids start at 8? (ran db:seed multiple times, but wouldn't destroy method reset id?)
